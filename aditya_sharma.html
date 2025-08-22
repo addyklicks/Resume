@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aditya Kumar Sharma — Cybersecurity Engineering Leader</title>
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --paper: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --chip: #eef2ff;
+      --line: #e5e7eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0c10;
+        --paper: #111318;
+        --ink: #f5f6f8;
+        --muted: #9aa2ad;
+        --accent: #60a5fa;
+        --chip: #1e293b;
+        --line: #1f2937;
+      }
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(37,99,235,0.08), transparent 60%),
+                  radial-gradient(1000px 600px at 120% 10%, rgba(99,102,241,0.08), transparent 60%), var(--bg);
+      color: var(--ink);
+      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    .container { max-width: 1024px; margin: 48px auto; padding: 0 20px; }
+
+    .resume { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); overflow: hidden; }
+
+    .top { display: grid; grid-template-columns: auto 1fr; gap: 24px; padding: 36px 36px 0 36px; align-items: center; }
+
+    .identity { padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+
+    h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px 0; letter-spacing: 0.2px; }
+    .role { font-weight: 600; color: var(--accent); margin-bottom: 10px; }
+
+    .contact { display: flex; flex-wrap: wrap; gap: 12px 18px; color: var(--muted); font-size: 14px; }
+    .contact a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--line); }
+
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--chip); border: 1px solid var(--line); border-radius: 999px; font-size: 13px; color: var(--muted); margin-right: 10px; }
+
+    .profile-wrap { display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+    .profile-pic { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 6px 18px rgba(0,0,0,.15); background:#e5e7eb; }
+
+    .toolbar { display: flex; gap: 10px; justify-content: flex-end; padding: 16px 36px 0 36px; }
+    .btn { appearance: none; border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 14px; }
+    .btn.primary { background: var(--accent); color: white; border-color: transparent; }
+
+    .grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; padding: 24px 36px 36px 36px; }
+
+    section { margin-top: 10px; }
+    .section-title { font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 14px; }
+
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 16px 16px; margin-bottom: 14px; background: linear-gradient(180deg, rgba(99,102,241,0.06), transparent 45%); }
+    .card h3 { margin: 0 0 6px 0; font-size: 18px; cursor: pointer; }
+    .card h4 { margin: 0; font-size: 14px; color: var(--muted); font-weight: 600; }
+    .card .when { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .card ul { margin: 10px 0 0 18px; display: none; }
+    .card li { margin: 6px 0; }
+    .card.open ul { display: block; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: var(--chip); border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; font-size: 13px; }
+
+    .two-col { columns: 2; gap: 14px; }
+    .two-col p { break-inside: avoid; margin: 0 0 8px 0; }
+
+    footer { border-top: 1px dashed var(--line); padding: 14px 36px 22px 36px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+
+    @media (max-width: 900px) { .top { grid-template-columns: 1fr; text-align: center; } .profile-wrap { align-items:center; } }
+    @media print { body { background: white; } .container { margin: 0; padding: 0; } .resume { box-shadow: none; border: none; } .toolbar { display: none; } .badge { border-color: #ddd; } .card ul { display: block !important; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="resume" id="resumeRoot">
+
+      <!-- Header / Identity -->
+      <div class="top">
+        <!-- <div class="profile-wrap">
+          <img id="avatar" alt="Profile photo of Aditya Kumar Sharma" class="profile-pic"/>
+          <label for="avatarInput" class="btn" style="font-weight:600; padding:6px 10px;">Change Photo</label>
+          <input id="avatarInput" type="file" accept="image/*" style="display:none" />
+        </div> -->
+        <div class="profile-wrap">
+          <img src="avatar.jpg" alt="Profile photo of Aditya Kumar Sharma" class="profile-pic"/>
+        </div>
+
+        <div>
+          <div class="identity">
+            <h1>Aditya Kumar Sharma</h1>
+            <div class="role">Cybersecurity Engineering Leader</div>
+            <div class="contact">
+              <span>New Delhi NCR, India</span>
+              <span>•</span>
+              <a href="tel:+919717667852">+91 97176 67852</a>
+              <span>•</span>
+              <a href="mailto:adityasharmaogs@gmail.com">adityasharmaogs@gmail.com</a>
+            </div>
+          </div>
+          <div>
+            <span class="badge">SC-100 • SC-200 • AZ-104 • AZ-500</span>
+            <span class="badge">5+ yrs Global SOC & SIEM</span>
+            <span class="badge">KQL • Defender • Sentinel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button class="btn" onclick="toggleCompact()">Toggle Compact</button>
+        <button class="btn primary" onclick="window.print()">Print / Save PDF</button>
+      </div>
+
+      <div class="grid">
+        <!-- Left column -->
+        <main>
+          <section>
+            <div class="section-title">Professional Summary</div>
+            <div class="card">
+              <p>
+                Cybersecurity Engineering Leader with 5+ years of specialized experience scaling global security operations, architecting SIEM/SOAR workflows, and leading cross-country endpoint migration projects for the world’s largest multinationals. Proven record delivering automation (76% reduction in manual effort), log ingestion cost savings (50%+), and crisis management (Log4j, Malware Attacks). Expert in Azure Sentinel, Microsoft Defender, KQL, and complex log engineering, with a focus on threat detection, compliance, and operational excellence.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Experience — KPMG</div>
+
+            <article class="card open">
+              <h3 onclick="toggleCard(this)">Assistant Manager — KPMG International</h3>
+              <h4>Global Security Engineering</h4>
+              <div class="when">Apr 2025 – Present</div>
+              <ul>
+                <li>Global lead for Microsoft MMA→AMA migration across 70,000+ endpoints, optimizing telemetry and detection capabilities.</li>
+                <li>Designed custom parsers & analytics, reducing log ingestion costs by 50%.</li>
+                <li>Automated ~76% of SOC operations, accelerating incident response.</li>
+                <li>Delivered real‑time executive dashboards for ingestion & cost visibility.</li>
+                <li>Led ransomware/malware investigations mapped to MITRE ATT&CK; advanced KQL-driven detections and Defender tuning.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 onclick="toggleCard(this)">Cybersecurity Consultant — KPMG</h3>
+              <div class="when">Apr 2023 – Mar 2025</div>
+              <ul>
+                <li>Built Azure Monitor rules, Logic Apps, and custom parsers for Sentinel.</li>
+                <li>Engineered automation for alerting/IR and log quality checks.</li>
+                <li>Combined Palo Alto CEF + Syslog parsers for 50%+ ingestion savings.</li>
+                <li>Managed server health telemetry, risk scoring, ASR & suppression logic in Defender.</li>
+                <li>Developed advanced KQL for BAU & threat hunting; built billing & health workbooks.</li>
+                <li>Implemented Conditional Access via Defender for Cloud Apps for Zero Trust.</li>
+                <li>Authored SOPs & trained global SOC engineering teams.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 onclick="toggleCard(this)">Senior SOC Analyst — KPMG</h3>
+              <div class="when">Apr 2022 – Mar 2023</div>
+              <ul>
+                <li>Architected multi‑tenant Sentinel integration for 118+ countries.</li>
+                <li>Migrated CentOS collectors to RHEL 7.9 with SaltStack automation.</li>
+                <li>Onboarded AD, VPN, DNS, firewall logs to boost alert fidelity.</li>
+                <li>Refined detections & KQL frameworks to cut false positives.</li>
+                <li>Supported ISO 27001, SOC 2, HIPAA posture validation.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 onclick="toggleCard(this)">SOC Analyst — KPMG</h3>
+              <div class="when">Jan 2020 – Mar 2022</div>
+              <ul>
+                <li>Migrated legacy SIEM (RSA NetWitness) to Azure Sentinel.</li>
+                <li>Contributed to early MDE rollout; led Log4j EDR response support.</li>
+                <li>Automated playbooks to reduce MTTR; maintained coverage & integrity.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section>
+            <div class="section-title">Freelance & Consulting</div>
+
+            <article class="card">
+              <h3 onclick="toggleCard(this)">L2 SOC Engineer — Informa (Contract)</h3>
+              <div class="when">2024 – Present</div>
+              <ul>
+                <li>Led deep‑dive investigations across Entra ID, M365, Defender for Endpoint/Office/Cloud, and AWS (GuardDuty, CloudTrail).</li>
+                <li>Built and tuned Sentinel analytics rules, hunting queries, and watchlists driving measurable alert quality improvements.</li>
+                <li>Delivered SC‑100‑level architecture guidance for identity protection, conditional access, and Zero Trust segmentation.</li>
+                <li>Coordinated incident response with business units, performing IOC pivoting, scoping, containment, and post‑incident reviews.</li>
+                <li>Created automation playbooks (Logic Apps) to enrich alerts with WHOIS/VT/GeoIP, cutting triage time by ~35%.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 onclick="toggleCard(this)">SOC Engineer — Astro Infosec (Contract)</h3>
+              <div class="when">2024 – Present</div>
+              <ul>
+                <li>Daily SOC monitoring and triage with clear escalation paths and playbook adherence (EDR/Email/Cloud).</li>
+                <li>Developed custom detections for persistence, lateral movement, and suspicious process chains (KQL + MDE advanced hunting).</li>
+                <li>Maintained data connectors and parsers; reduced false positives via entity suppression and threshold calibration.</li>
+                <li>Produced weekly metrics (MTTA/MTTR, detection coverage) and hygiene reports for leadership.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section>
+            <div class="section-title">Projects & Impact</div>
+            <div class="card open" id="projects-impact">
+              <h3 onclick="toggleCard(this)">Key Deliverables</h3>
+              <ul>
+                <li><strong>On-prem SIEM (RSA NetWitness) → Azure Sentinel Migration:</strong> Migrated legacy SIEM to Azure Sentinel, enabling global scalability, advanced threat correlation, and improved SOC efficiency.</li>
+                <li><strong>Device Onboarding to Defender EDR (7M+ devices):</strong> Successfully onboarded over 7 million devices, expanding endpoint visibility and significantly reducing mean-time-to-detect (MTTD).</li>
+                <li><strong>ASR Rule Implementation (Windows Endpoints & Servers):</strong> Rolled out Attack Surface Reduction rules across enterprise endpoints and servers, reducing ransomware and script-based attack exposure.</li>
+                <li><strong>CentOS → RHEL 8.10 Migration:</strong> Led OS migration for critical security infrastructure, boosting compliance, patch lifecycle support, and operational reliability.</li>
+                <li><strong>MMA & OMS Agent → AMA Migration:</strong> Directed migration of 70k+ endpoints to Azure Monitor Agent, cutting ingestion overhead and unlocking richer telemetry for detection and hunting.</li>
+              </ul>
+            </div>
+          </section>
+        </main>
+
+        <!-- Right column -->
+        <aside>
+          <section>
+            <div class="section-title">Core Competencies</div>
+            <div class="chips">
+              <span class="chip">Azure Sentinel</span>
+              <span class="chip">KQL</span>
+              <span class="chip">Microsoft Defender Suite</span>
+              <span class="chip">Threat Hunting</span>
+              <span class="chip">SOAR & Automation</span>
+              <span class="chip">Custom Parsers</span>
+              <span class="chip">Ansible / Terraform</span>
+              <span class="chip">SaltStack</span>
+              <span class="chip">Zero Trust / CA</span>
+              <span class="chip">Cost Optimization</span>
+              <span class="chip">Splunk</span>
+              <span class="chip">Zscaler / Mimecast</span>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Certifications</div>
+            <div class="card open" id="Certifications">
+              <h3 onclick="toggleCard(this)"> Key Certifications</h3>
+              <ul>
+                <li>Microsoft Certified: Cybersecurity Architect Expert (SC‑100)</li>
+                <li>Security Operations Analyst Associate (SC‑200)</li>
+                <li>Azure Security Engineer Associate (AZ-500)</li>
+                <li>Azure Administrator Associate (AZ‑104)</li>
+                <li>Security, Compliance & Identity Fundamentals (SC‑900)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Technical Skills</div>
+            <div class="card two-col">
+              <p><strong>Security & SIEM:</strong> Azure Sentinel, M365, Log Analytics, Splunk, KQL, SQL</p>
+              <p><strong>Automation & Infra:</strong> SaltStack, Ansible, Terraform, PowerShell, Linux/Windows</p>
+              <p><strong>Cloud & Compliance:</strong> Defender for Cloud, ServiceNow, Grafana, Tenable, Qualys</p>
+              <p><strong>Other Tools:</strong> SolarWinds, Cisco Umbrella, AWS S3, Zscaler</p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Education</div>
+            <div class="card">
+              <p><strong>B.Tech (Computer Engineering)</strong><br />Greater Noida Institute of Technology — 2020</p>
+              <p><strong>Intermediate (Mathematics)</strong><br />Oak Grove School, Mussoorie — 2016</p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Achievements</div>
+            <div class="card open" id="Achievements">
+              <h3 onclick="toggleCard(this)"> Known Achievements</h3>
+              <ul>
+                <li>KPMG Kudos Award (2023) — Custom KQL queries/parsers</li>
+                <li>KPMG Above & Beyond (2024) — MMA→AMA migration & automation</li>
+                <li>50%+ log ingestion cost reduction (Palo Alto) via parser innovation</li>
+                <li>Automated ~76% of manual SOC workflows</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Personal</div>
+            <div class="card">
+              <p><strong>Languages:</strong> English, Hindi</p>
+              <p><strong>Date of Birth:</strong> March 30, 1999</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <footer>
+        <span>Last updated: Aug 22, 2025</span>
+        <span>Built with clean HTML + CSS — print to save as PDF</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function toggleCompact() {
+      const root = document.getElementById('resumeRoot');
+      root.classList.toggle('compact');
+      if (root.classList.contains('compact')) {
+        root.style.setProperty('--line', 'transparent');
+        document.querySelectorAll('.card').forEach(c => c.style.background = 'transparent');
+      } else {
+        root.style.removeProperty('--line');
+        document.querySelectorAll('.card').forEach(c => c.style.removeProperty('background'));
+      }
+    }
+
+    function toggleCard(el) { el.parentElement.classList.toggle('open'); }
+
+    // Avatar handling: load from localStorage or try to fetch uploaded file
+    (async () => {
+      const img = document.getElementById('avatar');
+      const saved = localStorage.getItem('aditya_resume_avatar');
+      if (saved) { img.src = saved; return; }
+      // Try to fetch from the uploaded path in this Chat session
+      try {
+        const res = await fetch('sandbox:/mnt/data/New Profile Picture (1).jpg');
+        if (res.ok) {
+          const blob = await res.blob();
+          const reader = new FileReader();
+          reader.onload = () => { img.src = reader.result; try{ localStorage.setItem('aditya_resume_avatar', reader.result); }catch(e){} };
+          reader.readAsDataURL(blob);
+        }
+      } catch (e) {
+        // ignore; user can click Change Photo to load manually
+      }
+    })();
+
+    // Allow manual change
+    // document.getElementById('avatarInput')?.addEventListener('change', (e) => {
+    //   const f = e.target.files?.[0];
+    //   if (!f) return;
+    //   const r = new FileReader();
+    //   r.onload = () => { document.getElementById('avatar').src = r.result; try{ localStorage.setItem('aditya_resume_avatar', r.result); }catch(_){} };
+    //   r.readAsDataURL(f);
+    // });
+  </script>
+</body>
+</html>
